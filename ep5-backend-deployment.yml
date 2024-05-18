@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: episode-05-backend
+  namespace: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: episode-05-backend
+  template:
+    metadata:
+      labels:
+        app: episode-05-backend
+    spec:
+            containers:
+             - name: backend
+               image: episode-05-backend:latest
+               ports:
+                - containerPort: 5000
+               resources:
+                 limits:
+                   cpu: 500m
+                   memory: 512Mi
+                 requests:
+                   cpu: 200m
+                   memory: 256Mi
+    apiVersion: 
+      kind: 
+      metadata:
+        name: episode-05-backend-service
+        namespace: development
+      
