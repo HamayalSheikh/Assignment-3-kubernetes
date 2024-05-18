@@ -15,7 +15,7 @@ spec:
     spec:
             containers:
              - name: backend
-               image: episode-03-backend:latest
+               image: hamayal/episode-03-backend:latest
                ports:
                 - containerPort: 5000
                resources:
